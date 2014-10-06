@@ -8,8 +8,6 @@ colnames(data)[3] <- "Wind"
 colnames(data)[4] <- "Temperature"
 
 
-
-
 shinyServer(
   function(input, output) {
   
@@ -48,12 +46,6 @@ shinyServer(
                                                            height = 400
                                                            )))
   
-  ## Fill in the spot we created for a plot
- 
-    ## Render a barplot
-#     barplot(dataInput()[,input$factor],
-#             main=paste(input$factor, "in", month),
-#             ylab=yl, 
-#             xlab="Days")
+
 })
 })

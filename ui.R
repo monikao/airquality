@@ -1,6 +1,10 @@
 library(shiny)
 
-shinyUI(pageWithSidebar(
+shinyUI(
+  navbarPage("Database Explorer",
+             tabPanel("Plot",
+  pageWithSidebar(
+  
   headerPanel("Data science"),
   sidebarPanel(
     h3('Measuring airquality in New York form May to September 1973'),
@@ -16,4 +20,9 @@ shinyUI(pageWithSidebar(
     textOutput("yl"), textOutput("month"),
     htmlOutput("view")
   )
+)),
+tabPanel("About",
+         mainPanel(
+           includeMarkdown("include.md")
+         ))
 ))
