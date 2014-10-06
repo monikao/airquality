@@ -1,0 +1,48 @@
+Airquality - shiny application
+========================================================
+author: Monika Ożarek
+date: `r date()`
+transition: rotate
+
+Description
+========================================================
+
+The Shiny App I wrote displays particular elements measuring air quality:
+
+-Ozone
+
+-Solar Radiation
+
+-Wind
+
+-Temperaure
+
+for the month May to September 1973 in New York.
+
+The data were obtained from the New York State Department of Conservation (ozone data) and the National Weather Service (meteorological data).
+
+Example
+========================================================
+Here are the first few lines of the database:
+```{r, echo=FALSE}
+head(airquality)
+```
+
+Plot example: 
+========================================================
+Ozone in May
+```{r gvisColumnChart, results='asis', echo=FALSE}
+library(googleVis)
+  data <- airquality
+  may <- subset(data, select=c(Ozone, Day), subset=(data$Month == 5))
+  
+  M <- gvisColumnChart(may, xvar="Day" , yvar="Ozone", options(list(width = 600,
+                                                           height = 400
+                                                           )))
+  plot(M)
+
+```
+
+Conclusions:
+=========================================================
+It is verry useful to present data in an interactive way using googleVis plots !
