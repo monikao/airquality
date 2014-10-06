@@ -30,18 +30,15 @@ head(airquality)
 
 Plot example: 
 ========================================================
-Ozone in May
-```{r setOptions, message=FALSE, echo=FALSE}
-library(googleVis)
-op <- options(gvis.plot.tag='chart')
 
+```{r, echo=FALSE}
   data <- airquality
   may <- subset(data, select=c(Ozone, Day), subset=(data$Month == 5))
   
-  M <- gvisColumnChart(may, xvar="Day" , yvar="Ozone", options(list(width = 600,
-                                                           height = 400
-                                                           )))
-  plot(M)
+barplot(may$Ozone, 
+            main="Ozone in May",
+            ylab="Ozone (ppb)", 
+            xlab="Days")
 
 ```
 
