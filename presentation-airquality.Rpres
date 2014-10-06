@@ -39,7 +39,6 @@ barplot(may$Ozone,
             main="Ozone in May",
             ylab="Ozone (ppb)", 
             xlab="Days")
-
 ```
 
 Conclusions:

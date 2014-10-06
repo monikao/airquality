@@ -1,7 +1,7 @@
 Airquality - shiny application
 ========================================================
 author: Monika Ożarek
-date: Tue Oct 07 00:25:56 2014
+date: Tue Oct 07 00:45:09 2014
 transition: rotate
 
 Description
