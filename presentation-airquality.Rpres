@@ -31,8 +31,10 @@ head(airquality)
 Plot example: 
 ========================================================
 Ozone in May
-```{r gvisColumnChart, results='asis', echo=FALSE}
+```{r setOptions, message=FALSE, echo=FALSE}
 library(googleVis)
+op <- options(gvis.plot.tag='chart')
+
   data <- airquality
   may <- subset(data, select=c(Ozone, Day), subset=(data$Month == 5))
   
